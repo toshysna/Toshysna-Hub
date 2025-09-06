@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toshysna Hub</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="progress-bar"></div>
+    <header>
+      <h1>Toshysna Hub</h1>
+      <nav>
+        <ul>
+          <li><a href="#jeux/web design">Game / Web design</a></li>
+          <li><a href="#notes">Notes</a></li>
+          <li><a href="#cybersecurite">Cybersecurity</a></li>
+
+          <li><a href="#3D">Some 3D works</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="jeux/web design">
+        <h2>Game / Web design</h2>
+        <h3 style="text-align: center">Play to Space Snake:</h3>
+        <p style="text-align: center">
+          <a
+            class="link-hover"
+            href="https://toshysna.itch.io/space-snake"
+            target="_blank"
+          >
+            <iframe
+              frameborder="0"
+              src="https://itch.io/embed/3224858?&amp;bg_color=02001d&amp;fg_color=ffffff&amp;link_color=bc3aff&amp;border_color=32334b"
+              width="554"
+              height="169"
+            >
+              <a href="https://toshysna.itch.io/space-snake"
+                >Space Snake by Toshysna</a
+              >
+            </iframe>
+          </a>
+        </p>
+        <h3 style="text-align: center">Play to Geometry Dashgan</h3>
+        <div class="center-embed">
+          <iframe
+            src="https://scratch.mit.edu/projects/1137698875/embed"
+            allowtransparency="true"
+            width="485"
+            height="402"
+            frameborder="0"
+            scrolling="no"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <h3 style="text-align: center">
+          I also created a 3D universe where you can control a cube to the 3rd
+          person
+        </h3>
+        <p style="text-align: center">
+          <a href="https://toshysna.github.io/The-Green-Cube/" target="_blank">
+            <img
+              src="the green cube.png"
+              alt="the green cube"
+              width="300"
+              height="300"
+              class="cube-3d"
+            />
+            <script>
+              const cube = document.querySelector(".cube-3d");
+              cube.addEventListener("mousemove", (e) => {
+                const rect = cube.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const offsetX = (x - centerX) / centerX;
+                const offsetY = (centerY - y) / centerY;
+                const maxAngle = 20;
+                const rotateY = offsetX * maxAngle;
+                const rotateX = offsetY * maxAngle;
+                cube.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+              });
+              cube.addEventListener("mouseleave", () => {
+                cube.style.transform =
+                  "perspective(800px) rotateX(0deg) rotateY(0deg)";
+              });
+            </script>
+          </a>
+        </p>
+      </section>
+      <section id="notes">
+        <h2>My study notes</h2>
+        <p style="text-align: center">
+          <a
+            class="link-hover"
+            href="https://docs.google.com/document/d/17sUrTZHa-xnNVN4FcYwe2Bzxe-CWJHsAhmxrvclVQig/edit?tab=t.0"
+            target="_blank"
+            >NOTES JAVASCRIPT</a
+          >
+          <br />
+          <a
+            class="link-hover"
+            href="https://docs.google.com/document/d/1GHD5NWMVIZUkQoNSF6vSkuyHoPNex8myEjVcroyk8b4/edit?usp=sharing"
+            target="_blank"
+            >NOTES PYTHON</a
+          ><br />
+          <a
+            class="link-hover"
+            href="https://docs.google.com/document/d/1qIl-TydmgcwV2UoVLQ9WKk9xPqocSYITfnsFcRwvi5o/edit?usp=sharing"
+            target="_blank"
+            >NOTES HTML</a
+          >
+        </p>
+      </section>
+      <section id="cybersecurite">
+        <h2>Cybersecurity</h2>
+        <h3 style="text-align: center">
+          I collaborated on this digital library (pseudonym bipwastaken in the
+          collaborators):
+        </h3>
+        <p style="text-align: center">
+          <a
+            class="link-hover"
+            href="https://github.com/bst04/cybersources"
+            target="_blank"
+            >https://github.com/bst04/cybersources</a
+          >
+        </p>
+        <h3 style="text-align: center">
+          You can check out my python port scanner here:
+        </h3>
+        <p style="text-align: center">
+          <a
+            class="link-hover"
+            href="https://github.com/toshysna/Scanner-de-port"
+            target="_blank"
+            >https://github.com/toshysna/Scanner-de-port</a
+          >
+        </p>
+      </section>
+      <section id="3D">
+        <h2>Some of my 3D works</h2>
+        <div class="certificate-grid">
+          <img src="desk.png" alt="desk" class="certificate" />
+          <img
+            src="agenda icon floor bas.png"
+            alt="Agenda"
+            class="certificate"
+          />
+          <img
+            src="Coffre au trésor.png"
+            alt="Coffre au trésor"
+            class="certificate"
+          />
+          <img src="Flower.png" alt="Flower glow" class="certificate" />
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Toshysna. Tout droits réservés.</p>
+    </footer>
+
+    <div class="modal" id="modal">
+      <span class="close" id="closeBtn">&times;</span>
+      <img class="modal-content" id="modalImg" />
+    </div>
+    <script>
+      const certificates = document.querySelectorAll(".certificate");
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modalImg");
+      const closeBtn = document.getElementById("closeBtn");
+      certificates.forEach((cert) => {
+        cert.addEventListener("click", () => {
+          modal.style.display = "block";
+          modalImg.src = cert.src;
+          if (cert.alt === "BREVET") {
+            modalImg.style.transform = "rotate(-90deg)";
+          } else {
+            modalImg.style.transform = "rotate(0deg)";
+          }
+        });
+      });
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
+    <script>
+      window.addEventListener("scroll", function () {
+        var scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        var scrollHeight =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        var scrolled = (scrollTop / scrollHeight) * 100;
+        document.getElementById("progress-bar").style.width = scrolled + "%";
+      });
+    </script>
+  </body>
+</html>
