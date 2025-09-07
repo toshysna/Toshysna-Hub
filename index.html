@@ -26,6 +26,11 @@
   <source src="getout.mp3" type="audio/mpeg" />
 </audio>
 
+  <audio id="enter-sfx">
+<source src="spawn.mp3" type="audio/mpeg" />
+  </audio>
+
+
 <div id="main-content" style="display:none;">
 
 
@@ -196,10 +201,15 @@
 const splashScreen = document.getElementById("splash-screen");
 const mainContent = document.getElementById("main-content");
 const bgMusic = document.getElementById("bg-music");
-bgMusic.volume = 0.1;
+const enterSfx = document.getElementById("enter-sfx");
+
 enterBtn.addEventListener("click", () => {
+enterSfx.currentTime = 0;
+    enterSfx.play();
   splashScreen.style.display = "none";
   mainContent.style.display = "block";
+
+  bgMusic.volume = 0.1;
   bgMusic.play();
 });
 const clickSfx = document.getElementById("click-sfx");
@@ -290,7 +300,5 @@ logo.addEventListener("click", () => {
   );
 });
 </script>
-
-    </script>
   </body>
 </html>
