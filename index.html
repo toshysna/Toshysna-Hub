@@ -16,6 +16,12 @@
   <source src="ReposeHKSilksong.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
+<audio id="click-sfx">
+  <source src="Click.mp3" type="audio/mpeg">
+</audio>
+<audio id="yipee-sfx">
+  <source src="yipee.mp3" type="audio/mpeg">
+</audio>
 
 <div id="main-content" style="display:none;">
 
@@ -193,6 +199,15 @@ enterBtn.addEventListener("click", () => {
   mainContent.style.display = "block";
   bgMusic.play();
 });
+const clickSfx = document.getElementById("click-sfx");
+
+document.addEventListener("click", (e) => {
+  if (e.button === 0) { 
+    clickSfx.volume = 0.5
+    clickSfx.currentTime = 0; 
+    clickSfx.play();
+  }
+});
 
       const certificates = document.querySelectorAll(".certificate");
       const modal = document.getElementById("modal");
@@ -230,21 +245,28 @@ enterBtn.addEventListener("click", () => {
       });
     </script>
     <script>
-      const logo = document.getElementById("logo");
+const logo = document.getElementById("logo");
+const yipeeSfx = document.getElementById("yipee-sfx");
+
+logo.addEventListener("click", () => {
+
+  logo.classList.add("animate-rotate-tilt-pop", "animate-multi");
+  yipeeSfx.volume = 0.2
+  yipeeSfx.playbackRate = 1.5
+  yipeeSfx.currentTime = 0;
+  yipeeSfx.play();
 
 
-    logo.addEventListener("click", () => {
-      logo.classList.add("animate-rotate-tilt-pop");
+  logo.addEventListener(
+    "animationend",
+    () => {
+      logo.classList.remove("animate-rotate-tilt-pop", "animate-multi");
+    },
+    { once: true }
+  );
+});
+</script>
 
-      logo.addEventListener(
-        "animationend",
-        () => {
-          logo.classList.remove("animate-rotate-tilt-pop");
-        },
-        { once: true }
-      );
-    });
-  </script>
     </script>
   </body>
 </html>
