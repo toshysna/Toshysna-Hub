@@ -22,6 +22,9 @@
 <audio id="yipee-sfx">
   <source src="yipee.mp3" type="audio/mpeg">
 </audio>
+<audio id="sfx-link">
+  <source src="getout.mp3" type="audio/mpeg" />
+</audio>
 
 <div id="main-content" style="display:none;">
 
@@ -232,6 +235,27 @@ document.addEventListener("click", (e) => {
           modal.style.display = "none";
         }
       });
+    </script>
+    <script>
+      const sfx = document.getElementById("sfx-link");
+const links = document.querySelectorAll(".link-hover");
+
+links.forEach(link => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault(); 
+    const url = this.href;
+    sfx.playbackRate = 1.2
+    sfx.volume = 0.2
+    sfx.currentTime = 0;
+    sfx.play();
+
+
+    setTimeout(() => {
+      window.open(url, "_blank"); 
+    }, 200); 
+  });
+});
+
     </script>
     <script>
       window.addEventListener("scroll", function () {
