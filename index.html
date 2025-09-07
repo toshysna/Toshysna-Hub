@@ -11,7 +11,7 @@
     <div id="progress-bar"></div>
     <header>
       <div class="header-content">
-        <img src="logo mask toshysna.png" alt="Logo" class="logo" />
+        <img src="logo mask toshysna.png" alt="Logo" class="logo" id="logo" />
         <h1>Toshysna Hub</h1>
       </div>
       <nav>
@@ -204,6 +204,23 @@
         var scrolled = (scrollTop / scrollHeight) * 100;
         document.getElementById("progress-bar").style.width = scrolled + "%";
       });
+    </script>
+    <script>
+      const logo = document.getElementById("logo");
+
+
+    logo.addEventListener("click", () => {
+      logo.classList.add("animate-rotate-tilt-pop");
+
+      logo.addEventListener(
+        "animationend",
+        () => {
+          logo.classList.remove("animate-rotate-tilt-pop");
+        },
+        { once: true }
+      );
+    });
+  </script>
     </script>
   </body>
 </html>

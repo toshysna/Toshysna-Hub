@@ -189,3 +189,28 @@ footer {
   max-width: 400px;
   height: auto;
 }
+
+@keyframes rotateTiltPop {
+  0% {
+    transform: rotate(0deg) rotateX(0deg) rotateY(0deg) scale(1);
+  }
+  20% {
+    transform: rotate(72deg) rotateX(5deg) rotateY(-5deg) scale(0.8);
+  }
+  40% {
+    transform: rotate(144deg) rotateX(-5deg) rotateY(5deg) scale(1.2);
+  }
+  60% {
+    transform: rotate(216deg) rotateX(3deg) rotateY(-3deg) scale(0.9);
+  }
+  80% {
+    transform: rotate(288deg) rotateX(-2deg) rotateY(2deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) rotateX(0deg) rotateY(0deg) scale(1);
+  }
+}
+
+.animate-rotate-tilt-pop {
+  animation: rotateTiltPop 0.8s ease-in-out;
+}
