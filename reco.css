@@ -1,0 +1,47 @@
+.recommendation-card {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background-color: #1f1f1f;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  color: #e0e0e0;
+}
+
+.recommendation-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.recommendation-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.recommendation-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.recommendation-name {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.recommendation-title {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.95rem;
+  color: #b0b0b0;
+}
+
+.recommendation-body p {
+  margin: 0;
+  line-height: 1.7;
+  font-size: 0.98rem;
+  color: #d0d0d0;
+}
