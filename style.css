@@ -298,9 +298,9 @@ footer {
 }
 
 h3 {
-  font-size: 1.5rem;   /* taille augmentée */
-  font-weight: 600;    /* un peu plus solide */
-  color: #e5e5e5;      /* cohérent avec ton thème */
+  font-size: 1.5rem;   
+  font-weight: 600;   
+  color: #e5e5e5;      
   margin-bottom: 0.8rem;
   margin-top: 1.8rem;
 }
