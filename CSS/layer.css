@@ -50,7 +50,7 @@
 .bg-mask {
   position: fixed;
   inset: 0;
-  background-image: url("../background section/background section.png");
+  background-image: url("../background section/background section.webp");
   background-size: cover;
   background-position: center;
   z-index: 10; /* masque devant tout */
