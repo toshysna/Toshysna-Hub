@@ -6,9 +6,16 @@
 
     <title>Toshysna Hub</title>
     <link rel="icon" type="image/png" href="logo mask toshysna.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="reco.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/reco.css" />
+    <link rel="stylesheet" href="CSS/layer.css" />
+    <link rel="stylesheet" href="CSS/header.css" />
+    <script src="JS/layer.js"></script>
+    <script src="JS/link.js" defer></script>
+    <script src="JS/progress_bar.js"></script>
+    <script src="JS/yepee.js" defer></script>
   </head>
   <body>
     <div id="splash-screen">
@@ -37,34 +44,65 @@
 <div id="main-content" style="display:none;">
 
 
+
+
     <div id="progress-bar"></div>
-    <header>
-      
-      <div class="header-content">
-        <img src="logo mask toshysna.png" alt="Logo" class="logo" id="logo" />
-        <h1>Toshysna Hub</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#jeux/web design">Game / Web </a></li>
-          <li><a href="#notes">Notes</a></li>
-          <li><a href="#cybersecurite">Cybersecurity</a></li>
-          <li><a href="#3D">Some 3D works</a></li>
-          <li><a href="#2D">Some 2D works</a></li>
-          <li><a href="#reco">Recommendations</a></li>
-        </ul>
-      </nav>
-    </header>
+   <header class="site-content">
+
+  <div class="header-left">
+    <nav>
+      <ul>
+        <li><a href="#jeux/web design">Game / Web</a></li>
+        <li><a href="#notes">Notes</a></li>
+        <li><a href="#cybersecurite">Cybersecurity</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="header-center">
+    <img src="logo mask toshysna.png" alt="Logo" class="logo" id="logo" />
+    <h1>Toshysna Hub</h1>
+  </div>
+
+  <div class="header-right">
+    <nav>
+      <ul>
+        <li><a href="#3D">Some 3D works</a></li>
+        <li><a href="#2D">Some 2D works</a></li>
+        <li><a href="#reco">Recommendations</a></li>
+      </ul>
+    </nav>
+  </div>
+
+</header>
+
+
+
+
+   <div class="layers">
+    <div class="hero-layer layer-1"></div>
+    <div class="hero-layer layer-2"></div>
+    <div class="hero-layer layer-3"></div>
+    <div class="hero-layer layer-4"></div>
+    <div class="hero-layer layer-5"></div>
+  </div>
+
+  <div class="bg-mask"></div>
+
+  <div id="main-content" class="site-content" >
+
     <main>
+      
       <section id="jeux/web design">
         <h2>Game / Web</h2>
+        <img src="separateur titre.png" alt="separateur_titre" class="separateur_titre"/>
         <h3 style="text-align: center">I made a tier list website:</h3>
 <p style="text-align: center">
           <a href="https://www.n1tier.com/" target="_blank">
             <img
               src="narrow-one-tier-logo-colored-H.png"
             alt="tierlist"
-              class="imglink"
+              class="logon"
             />
             </a>
         <h3 style="text-align: center">Play to Space Snake:</h3>
@@ -133,9 +171,11 @@
             </script>
           </a>
         </p>
+        <img src="separateur.png" alt="separateur" class="separateur"/>
       </section>
       <section id="notes">
         <h2>Some of my study notes</h2>
+       <img src="separateur titre.png" alt="separateur_titre" class="separateur_titre"/>
         <br />
         <p style="text-align: center">
           <a
@@ -160,9 +200,11 @@
             >NOTES HTML/CSS</a
           >
         </p>
+        <img src="separateur.png" alt="separateur" class="separateur"/>
       </section>
       <section id="cybersecurite">
         <h2>Cybersecurity</h2>
+        <img src="separateur titre.png" alt="separateur_titre" class="separateur_titre"/>
         <h3 style="text-align: center">
           I collaborated on this digital library (pseudonym bipwastaken in the
           contributors):
@@ -186,9 +228,11 @@
             >https://github.com/toshysna/Scanner-de-port</a
           >
         </p>
+        <img src="separateur.png" alt="separateur" class="separateur"/>
       </section>
       <section id="3D">
         <h2>Some of my 3D works</h2>
+        <img src="separateur titre.png" alt="separateur_titre" class="separateur_titre"/>
         <h3 style="text-align: center">Rigging and Animation</h3>
         <div class="video-container"> <iframe src="https://www.youtube.com/embed/2K_jMH5P3jQ" frameborder="0" allowfullscreen></iframe> </div>
         <div class="video-container"> <iframe src="https://www.youtube.com/embed/FiIOw1q0cPY?start=406" frameborder="0" allowfullscreen></iframe> </div>
@@ -225,14 +269,16 @@
           <p style="text-align: center">
           <a href="https://www.instagram.com/a_3d_student/" target="_blank">
             <img
-              src="see_all_my_work_2.png"
+              src="see_all_my_work.png"
             alt="see_more"
               class="imglink"
             />
             </a></p>
+            <img src="separateur.png" alt="separateur" class="separateur"/>
       </section>
       <section id="2D">
         <h2>Some of my 2D works</h2>
+        <img src="separateur titre.png" alt="separateur_titre" class="separateur_titre"/>
         <h3 style="text-align: center">Graphic Design</h3>
         <p style="text-align: center">
           <a
@@ -252,14 +298,16 @@
 <p style="text-align: center">
          <a href="https://www.youtube.com/@a_2d_student/videos" target="_blank">
             <img
-              src="see_all_my_work_3.png"
+              src="see_all_my_work.png"
             alt="see_more"
               class="imglink"
             />
             </a></p>
+            <img src="separateur.png" alt="separateur" class="separateur"/>
 </section>
 <section id="reco">
   <h2>Recommendation</h2>
+  <img src="separateur titre.png" alt="separateur_titre" class="separateur_titre"/>
   <div class="recommendation-card">
   <div class="recommendation-header">
     <img src="jesper.png" alt="Jesper van den Ende" class="recommendation-avatar">
@@ -282,9 +330,6 @@
     </p>
   </div>
 </div>
-
-
-
 </section>
     </main>
     <footer>
@@ -345,59 +390,5 @@ document.addEventListener("click", (e) => {
         }
       });
     </script>
-    <script>
-      const sfx = document.getElementById("sfx-link");
-const links = document.querySelectorAll(".link-hover");
-
-links.forEach(link => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault(); 
-    const url = this.href;
-    sfx.playbackRate = 1.2
-    sfx.volume = 0.1
-    sfx.currentTime = 0;
-    sfx.play();
-
-
-    setTimeout(() => {
-      window.open(url, "_blank"); 
-    }, 200); 
-  });
-});
-
-    </script>
-    <script>
-      window.addEventListener("scroll", function () {
-        var scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-        var scrollHeight =
-          document.documentElement.scrollHeight -
-          document.documentElement.clientHeight;
-        var scrolled = (scrollTop / scrollHeight) * 100;
-        document.getElementById("progress-bar").style.width = scrolled + "%";
-      });
-    </script>
-    <script>
-const logo = document.getElementById("logo");
-const yipeeSfx = document.getElementById("yipee-sfx");
-
-logo.addEventListener("click", () => {
-
-  logo.classList.add("animate-rotate-tilt-pop", "animate-multi");
-  yipeeSfx.volume = 0.2
-  yipeeSfx.playbackRate = 1.5
-  yipeeSfx.currentTime = 0;
-  yipeeSfx.play();
-
-
-  logo.addEventListener(
-    "animationend",
-    () => {
-      logo.classList.remove("animate-rotate-tilt-pop", "animate-multi");
-    },
-    { once: true }
-  );
-});
-</script>
   </body>
 </html>

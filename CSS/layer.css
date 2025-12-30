@@ -1,0 +1,64 @@
+/* Le conteneur principal */
+.hero {
+  position: relative;
+}
+
+/* Conteneur des layers */
+.layers {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Style commun à toutes les layers */
+.hero-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Ordre des layers (1 = devant, 5 = derrière) */
+.layer-1 { 
+  z-index: 5;
+  background-image: url("../Layers/layer1.png");
+}
+
+.layer-2 { 
+  z-index: 4;
+  background-image: url("../Layers/layer2.png");
+}
+
+.layer-3 { 
+  z-index: 3;
+  background-image: url("../Layers/layer3.png");
+}
+
+.layer-4 { 
+  z-index: 2;
+  background-image: url("../Layers/layer4.png");
+}
+
+.layer-5 { 
+  z-index: 1;
+  background-image: url("../Layers/layer5.png");
+}
+
+/* Le masque au-dessus des layers */
+.bg-mask {
+  position: fixed;
+  inset: 0;
+  background-image: url("../background section/background section.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 10; /* masque devant tout */
+  pointer-events: none;
+}
+
+/* Le contenu du site au-dessus du masque */
+.site-content {
+  position: relative;
+  z-index: 20;
+}
