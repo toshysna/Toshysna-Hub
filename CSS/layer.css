@@ -23,27 +23,27 @@
 /* Ordre des layers (1 = devant, 5 = derrière) */
 .layer-1 { 
   z-index: 5;
-  background-image: url("../Layers/layer1.png");
+  background-image: url("../Layers/layer1.webp");
 }
 
 .layer-2 { 
   z-index: 4;
-  background-image: url("../Layers/layer2.png");
+  background-image: url("../Layers/layer2.webp");
 }
 
 .layer-3 { 
   z-index: 3;
-  background-image: url("../Layers/layer3.png");
+  background-image: url("../Layers/layer3.webp");
 }
 
 .layer-4 { 
   z-index: 2;
-  background-image: url("../Layers/layer4.png");
+  background-image: url("../Layers/layer4.webp");
 }
 
 .layer-5 { 
   z-index: 1;
-  background-image: url("../Layers/layer5.png");
+  background-image: url("../Layers/layer5.webp");
 }
 
 /* Le masque au-dessus des layers */
