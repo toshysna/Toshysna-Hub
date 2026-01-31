@@ -298,3 +298,15 @@ h3 {
   border: 2px solid #4a9cff;
   border-color: #4a9cff;
 }
+
+.channel {
+  width: 45%;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.channel:hover {
+  transform: scale(1.05);
+}
