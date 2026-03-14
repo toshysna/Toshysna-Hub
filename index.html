@@ -247,17 +247,32 @@
         </p>
         <img src="separateur.png" alt="separateur" class="separateur"/>
       </section>
-       <section id="2D">
-        <h2>Some of my 2D works</h2>
-        <img src="separateur titre.png" alt="separateur_titre" class="separateur_titre"/>
-        <h3 style="text-align: center">Graphic Design</h3>
-         <p style="text-align: center">
-          <a
-            class="link-hover"
-            href="https://www.instagram.com/toshysna_ui/"
-            target="_blank"
-            >Motion Design</a
-          ></p>
+      <section id="2D">
+    <h2>Some of my 2D works</h2>
+    <img src="separateur titre.png" alt="separateur_titre" class="separateur_titre"/>
+    <h3 style="text-align: center">Graphic Design</h3>
+
+    <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+        <p style="margin: 0;">
+            
+                <a class="link-hover"
+                href="https://www.instagram.com/toshysna_ui/"
+                target="_blank"
+            >Motion Design</a>
+        </p>
+        <canvas id="my-icon" width="200" height="200"></canvas>
+    </div>
+</section>
+
+<script src="https://unpkg.com/@rive-app/canvas@latest"></script>
+<script>
+    const r = new rive.Rive({
+        src: 'toshysna_motion.riv',
+        canvas: document.getElementById('my-icon'),
+        autoplay: true,
+        stateMachines: 'State Machine 1',
+    });
+</script>
         <p style="text-align: center">
           <a
             class="link-hover"
