@@ -253,6 +253,7 @@
     <h3 style="text-align: center">Graphic Design</h3>
 
     <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+       <canvas id="cah" width="200" height="200"></canvas>
         <p style="margin: 0;">
             
                 <a class="link-hover"
@@ -273,6 +274,15 @@
         stateMachines: 'State Machine 1',
     });
 </script>
+    <script>
+      const n = new rive.Rive({
+        src: 'cahforth.riv',
+        canvas: document.getElementById('cah'),
+        autoplay: true,
+        stateMachines: 'State Machine 1', 
+        useOffscreenRenderer: true,       
+      });
+    </script>
         <p style="text-align: center">
           <a
             class="link-hover"
